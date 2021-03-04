@@ -23,6 +23,7 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
+    memset(&send_buf, '\0', sizeof(send_buf));
     strcpy(send_buf.name, "Chtholly");
     for (i = 0; i < NUM_SUBJECTS; i++)
         send_buf.score[i] = htons(rand() % 100);
